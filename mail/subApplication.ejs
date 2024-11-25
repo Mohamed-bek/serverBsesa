@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe Request Completed</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        font-size: 1.8rem;
+      }
+      p {
+        color: #555;
+      }
+      span {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div class="logo">BSESA</div>
+      </div>
+      <h1>Dear <%= name %>!</h1>
+      <p>
+        Thank you for submitting the request for
+        <span><%= applicationName %></span>. <% if (status === "pending") { %>
+        We wanted to inform you that we are currently reviewing your request,
+        and our team will contact you as soon as we have evaluated it. <% } else
+        if (status === "approved") { %> Congratulations! Your request has been
+        approved. Our team will contact you shortly to discuss the next steps.
+        <% } else if (status === "rejected") { %> We regret to inform you that
+        your request has been rejected. If you have any questions, please don't
+        hesitate to contact us. <% } %>
+      </p>
+      <p>Best regards,</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!-- mail.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actiavtion Code</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        font-size: 1.8rem;
+      }
+      p {
+        color: #555;
+      }
+      span {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      .footer {
+        margin-top: 20px;
+        text-align: center;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div class="logo">Elearning</div>
+      </div>
+      <h1>Activation Code</h1>
+      <h1>Hello <%= username %>!</h1>
+      <p>Your activation code is: <span><%= activationCode %></span></p>
+      <p>From here You can Activate Youre Account Directely .</p>
+      <a href="<%= actiavtionUrl %>" class="button"> Activate </a>
+      <p class="footer">Thank you,<br /><%= username %></p>
+    </div>
+  </body>
+</html>
